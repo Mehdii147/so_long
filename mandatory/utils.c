@@ -44,5 +44,6 @@ void	ft_free(char **free_this)
 void	exit_free(t_all *slg)
 {
 	ft_free(slg->mapi);
+	ft_putstr_fd("\033[1;31m=GAME OVER=\n", 1);
 	exit(0);
 }

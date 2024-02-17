@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 19:36:45 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/16 22:35:45 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/17 14:11:14 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	move_up(t_all *slg)
 	else if (slg->mapi[slg->player_y - 1][slg->player_x] == 'E')
 	{
 		if (slg->collect_cnt == 0)
-			(ft_putstr_fd("YOU WON", 1), exit_free(slg));
+			(ft_putstr_fd("\033[0;32m=YOU WON=\n", 1), exit_free(slg));
 		else
 			slg->player_y -= 1;
 	}
@@ -51,7 +51,7 @@ void	move_down(t_all *slg)
 	else if (slg->mapi[slg->player_y + 1][slg->player_x] == 'E')
 	{
 		if (slg->collect_cnt == 0)
-			(ft_putstr_fd("YOU WON", 1), exit_free(slg));
+			(ft_putstr_fd("\033[0;32m=YOU WON=\n", 1), exit_free(slg));
 		else
 			slg->player_y += 1;
 	}
@@ -80,7 +80,7 @@ void	move_left(t_all *slg)
 	else if (slg->mapi[slg->player_y][slg->player_x - 1] == 'E')
 	{
 		if (slg->collect_cnt == 0)
-			(ft_putstr_fd("YOU WON", 1), exit_free(slg));
+			(ft_putstr_fd("\033[0;32m=YOU WON=\n", 1), exit_free(slg));
 		else
 			slg->player_x -= 1;
 	}
@@ -109,7 +109,7 @@ void	move_right(t_all *slg)
 	else if (slg->mapi[slg->player_y][slg->player_x + 1] == 'E')
 	{
 		if (slg->collect_cnt == 0)
-			(ft_putstr_fd("YOU WON", 1), exit_free(slg));
+			(ft_putstr_fd("\033[0;32m=YOU WON=\n", 1), exit_free(slg));
 		else
 			slg->player_x += 1;
 	}
