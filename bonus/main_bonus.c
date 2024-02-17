@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 19:32:20 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/17 15:37:50 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/17 23:24:46 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int	set_windows_officiel(t_all *slg)
 
 int	exit_finish(t_all *slg)
 {
+	ft_putstr_fd("\033[1;31m=GAME OVER=\n", 1);
 	exit_free(slg);
 	return (0);
 }
@@ -78,6 +79,8 @@ int	main(int ac, char **av)
 
 	if (ac != 2)
 		ft_error("\033[1;31m invalid argument number \033[0m", 1, NULL);
+	if (ft_strncmp(ft_strrchr(av[1], '.'), ".ber"))
+		ft_error("\033[1;31m not ber extension!\033[0m", 1, NULL);
 	so_long(&slg, av[1]);
 	set_windows_officiel(&slg);
 	mlx_hook(slg.mlx_win, 2, 0, player_moves, &slg);

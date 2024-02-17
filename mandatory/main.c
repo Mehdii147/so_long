@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 19:32:20 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/17 15:41:26 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/17 22:56:11 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ int	main(int ac, char **av)
 
 	if (ac != 2)
 		ft_error("\033[1;31m invalid argument number \033[0m", 1, NULL);
+	if (ft_strncmp(ft_strrchr(av[1], '.'), ".ber"))
+		ft_error("\033[1;31m not ber extension!\033[0m", 1, NULL);
 	so_long(&slg, av[1]);
 	set_windows_officiel(&slg);
 	mlx_hook(slg.mlx_win, 17, 0, exit_finish, &slg);
