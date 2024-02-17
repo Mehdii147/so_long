@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 19:36:45 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/17 14:11:47 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/17 15:43:43 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,10 @@ int	player_moves(int key, t_all *slg)
 	if (key == 2 || key == 124)
 		move_right(slg);
 	if (key == 53)
+	{
+		ft_putstr_fd("\033[1;31m=GAME OVER=\n", 1);
 		exit_free(slg);
+	}
 	update_map(slg);
 	return (0);
 }
