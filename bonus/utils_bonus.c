@@ -46,12 +46,3 @@ void	exit_free(t_all *slg)
 	ft_free(slg->mapi);
 	exit(0);
 }
-
-void	help(int j, int i, int e, t_all *slg)
-{
-	slg->enemy_tab[e] = malloc(2 * sizeof(int));
-	if (!slg->enemy_tab)
-		(free(slg->enemy_tab), exit(1));
-	slg->enemy_tab[e][0] = i;
-	slg->enemy_tab[e][1] = j;
-}

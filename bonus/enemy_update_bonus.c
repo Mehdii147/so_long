@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 00:12:33 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/16 23:13:35 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/17 21:12:25 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	enemy_pos_tab(t_all *slg)
 
 	e = 0;
 	slg->enemy_cnt = enemy_counter(slg);
-	slg->enemy_tab = malloc(slg->enemy_cnt * sizeof(int));
+	slg->enemy_tab = malloc(slg->enemy_cnt * sizeof(int *));
 	if (!slg->enemy_tab)
 		(free(slg->enemy_tab), exit(1));
 	i = -1;
@@ -53,8 +53,11 @@ void	enemy_pos_tab(t_all *slg)
 		{
 			if (slg->mapi[i][j] == 'S')
 			{
-				help(j, i, e, slg);
-				e++;
+				slg->enemy_tab[e] = malloc(2 * sizeof(int *));
+				if (!slg->enemy_tab)
+					(free(slg->enemy_tab), exit(1));
+				slg->enemy_tab[e][0] = i;
+				slg->enemy_tab[e++][1] = j;
 			}
 		}
 	}

@@ -6,7 +6,7 @@
 #    By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/14 16:05:09 by ehafiane          #+#    #+#              #
-#    Updated: 2024/02/16 18:57:50 by ehafiane         ###   ########.fr        #
+#    Updated: 2024/02/17 21:07:10 by ehafiane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = so_long
 NAME_BONUS = so_long_bonus
 
 CC = cc
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS = -Wall -Werror -Wextra -fsanitize=address -g
 SRC_DIR = ./mandatory/
 SRC_DIR_BONUS = ./bonus/
 OBJ_DIR = ./obj/

@@ -26,7 +26,7 @@ void	check_lines_lenth(char **mapi)
 		i++;
 	}
 	if (i < 3)
-		ft_error("\033[1;31m invalid lines (> 3) \033[0m", 1, mapi);
+		ft_error("\033[1;31m invalid lines \033[0m", 1, mapi);
 }
 
 void	check_walls(char **mapi)

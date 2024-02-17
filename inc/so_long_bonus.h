@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 16:22:33 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/16 23:13:56 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/17 21:15:58 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,5 @@ int		update_enemy(t_all *slg);
 void	update_map(t_all *slg);
 int		exit_finish(t_all *slg);
 void	enemy_pos_tab(t_all *slg);
-void	help(int j, int i, int e, t_all *slg);
 
 #endif
