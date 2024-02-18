@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 13:45:18 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/16 22:57:11 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/18 12:47:39 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*set_window(char **mapi, void *mlx_ptr)
 		y++;
 		i++;
 	}
-	return (mlx_new_window(mlx_ptr, x * 60, y * 60, "so_long by ACE"));
+	return (mlx_new_window(mlx_ptr, x * 60, y * 60, "so_long_bonus by ACE"));
 }
 
 void	*create_image(void	*mlx_ptr, char *image)
