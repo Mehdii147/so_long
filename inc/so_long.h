@@ -6,13 +6,12 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 12:48:23 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/17 14:33:09 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/18 14:24:11 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-# include "../libft/libft.h"
 # include "get_next_line.h"
 # include <errno.h>
 # include <fcntl.h>
@@ -48,5 +47,15 @@ void	exit_free(t_all *sol);
 int		set_windows_officiel(t_all *slg);
 void	*create_image(void	*mlx_ptr, char *image);
 void	update_map(t_all *slg);
+size_t	ft_strlen(const char *str);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2);
+char	*ft_strdup(const char *s1);
+char	*ft_itoa(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif

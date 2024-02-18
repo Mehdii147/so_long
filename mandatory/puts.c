@@ -1,16 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   puts.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 20:33:43 by mehdi             #+#    #+#             */
-/*   Updated: 2023/11/18 01:50:34 by ehafiane         ###   ########.fr       */
+/*   Created: 2024/02/18 14:17:34 by ehafiane          #+#    #+#             */
+/*   Updated: 2024/02/18 14:18:26 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/so_long.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	if (fd < 0)
+		return ;
+	write(fd, &c, 1);
+}
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -20,4 +27,34 @@ void	ft_putendl_fd(char *s, int fd)
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (fd < 0)
+		return ;
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+		ft_putnbr_fd(n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + 48, fd);
+}
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	if (fd < 0)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

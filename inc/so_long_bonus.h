@@ -6,13 +6,12 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 16:22:33 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/18 13:06:05 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/18 14:24:06 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_BONUS_H
 # define SO_LONG_BONUS_H
-# include "../libft/libft.h"
 # include "get_next_line_bonus.h"
 # include <errno.h>
 # include <fcntl.h>
@@ -55,5 +54,15 @@ int		update_enemy(t_all *slg);
 void	update_map(t_all *slg);
 int		exit_finish(t_all *slg);
 void	enemy_pos_tab(t_all *slg);
+size_t	ft_strlen(const char *str);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2);
+char	*ft_strdup(const char *s1);
+char	*ft_itoa(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
