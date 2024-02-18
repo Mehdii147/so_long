@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 13:45:18 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/18 12:47:39 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/18 12:50:01 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,12 +97,12 @@ void	so_long(t_all *slg, char *map_filer)
 	slg->mlx_win = set_window(slg->mapi, slg->mlx_ptr);
 	if (!slg->mlx_win)
 		ft_error("mlx window fail", 1, slg->mapi);
-	slg->opexit_image = create_image(slg->mlx_ptr, "./textures/opexit.xpm");
 	slg->closed_exit_image = create_image(slg->mlx_ptr, "./textures/nexit.xpm");
+	slg->opexit_image = create_image(slg->mlx_ptr, "./textures/opexit.xpm");
 	slg->floor_image = create_image(slg->mlx_ptr, "./textures/floor.xpm");
 	slg->wall_image = create_image(slg->mlx_ptr, "./textures/walls.xpm");
-	slg->player_image = create_image(slg->mlx_ptr, "./textures/player.xpm");
 	slg->collect_image = create_image(slg->mlx_ptr, "./textures/collect.xpm");
+	slg->player_image = create_image(slg->mlx_ptr, "./textures/player.xpm");
 	slg->enemy_image = create_image(slg->mlx_ptr, "./textures/enemy.xpm");
 	if (!slg->player_image || !slg->collect_image || !slg->floor_image
 		|| !slg->wall_image || !slg->closed_exit_image || !slg->enemy_image)
