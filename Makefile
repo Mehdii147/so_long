@@ -6,7 +6,7 @@
 #    By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/14 16:05:09 by ehafiane          #+#    #+#              #
-#    Updated: 2024/02/18 13:02:44 by ehafiane         ###   ########.fr        #
+#    Updated: 2024/02/18 13:35:30 by ehafiane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = so_long
 NAME_BONUS = so_long_bonus
 
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra 
 SRC_DIR = ./mandatory/
 SRC_DIR_BONUS = ./bonus/
 OBJ_DIR = ./obj/
@@ -50,7 +50,7 @@ $(NAME): $(OBJ) $(LIBFT)
                                                                        	 		\033[0m"
 	@echo "                               					 \033[4:35m By: ACE"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c inc/so_long.h inc/get_next_line.h
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c inc/so_long.h inc/get_next_line.h libft/libft.h
 	@mkdir -p obj
 	@$(CC) $(CFLAGS) -Imlx -c $< -o $@
 	
@@ -68,7 +68,7 @@ $(NAME_BONUS): $(OBJ_BONUS) $(LIBFT)
                                                                        	 		\033[0m"
 	@echo "                               					 \033[4:35m By: ACE"
 
-$(OBJ_DIR)%_bonus.o: $(SRC_DIR_BONUS)%_bonus.c inc/so_long_bonus.h inc/get_next_line_bonus.h
+$(OBJ_DIR)%_bonus.o: $(SRC_DIR_BONUS)%_bonus.c inc/so_long_bonus.h inc/get_next_line_bonus.h libft/libft.h
 	@mkdir -p obj
 	@$(CC) $(CFLAGS) -Imlx -c $< -o $@
 
