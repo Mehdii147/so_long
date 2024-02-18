@@ -6,12 +6,11 @@
 #    By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/14 16:05:09 by ehafiane          #+#    #+#              #
-#    Updated: 2024/02/18 14:24:50 by ehafiane         ###   ########.fr        #
+#    Updated: 2024/02/18 15:24:03 by ehafiane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-LIBFT = libft.a
 NAME = so_long
 NAME_BONUS = so_long_bonus
 

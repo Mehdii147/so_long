@@ -6,7 +6,7 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 19:32:20 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/18 13:13:52 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:31:25 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ void	update_map(t_all *slg)
 	str = ft_itoa(slg->player_mv);
 	mlx_clear_window(slg->mlx_ptr, slg->mlx_win);
 	set_windows_officiel(slg);
-	mlx_string_put(slg->mlx_ptr, slg->mlx_win, 60, 60, 0xFFFFFF, "MOVES: ");
-	mlx_string_put(slg->mlx_ptr, slg->mlx_win, 70, 80, 0xFFFFFF, str);
+	mlx_string_put(slg->mlx_ptr, slg->mlx_win, 15, 15, 0xFFFFFF, "MOVES: ");
+	mlx_string_put(slg->mlx_ptr, slg->mlx_win, 80, 15, 0xFFFFFF, str);
 	free(str);
 }
 
