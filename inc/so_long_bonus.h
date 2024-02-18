@@ -6,20 +6,19 @@
 /*   By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 16:22:33 by ehafiane          #+#    #+#             */
-/*   Updated: 2024/02/17 21:15:58 by ehafiane         ###   ########.fr       */
+/*   Updated: 2024/02/18 12:08:26 by ehafiane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_BONUS_H
 # define SO_LONG_BONUS_H
 # include "../libft/libft.h"
-# include "get_next_line.h"
+# include "get_next_line_bonus.h"
 # include <errno.h>
 # include <fcntl.h>
 # include <unistd.h>
 # include <string.h>
 # include "mlx.h"
-# include <stdio.h>
 
 typedef struct s_all
 {

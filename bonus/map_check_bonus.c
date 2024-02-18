@@ -22,11 +22,11 @@ void	check_lines_lenth(char **mapi)
 	while (mapi[i])
 	{
 		if ((int)ft_strlen(mapi[i]) != len || len < 3)
-			ft_error("\033[1;31m invalid line len \033[0m", 1, mapi);
+			ft_error("\033[1;31m too much colones\033[0m", 1, mapi);
 		i++;
 	}
 	if (i < 3)
-		ft_error("\033[1;31m invalid lines (> 3) \033[0m", 1, mapi);
+		ft_error("\033[1;31m too much lines\033[0m", 1, mapi);
 }
 
 void	check_walls(char **mapi)
@@ -37,23 +37,23 @@ void	check_walls(char **mapi)
 	i = -1;
 	while (mapi[0][++i])
 		if (mapi[0][i] != '1')
-			ft_error("\033[1;31m not surrounded by walls \033[0m", 1, mapi);
+			ft_error("\033[1;31m not surrounded by walls\033[0m", 1, mapi);
 	i = 0;
 	while (mapi[++i])
 	{
 		if (mapi[i][0] != '1')
-			ft_error("\033[1;31m not surrounded by walls \033[0m", 1, mapi);
+			ft_error("\033[1;31m not surrounded by walls\033[0m", 1, mapi);
 		j = 0;
 		while (mapi[i][j + 1])
 			j++;
 		if (mapi[i][j] != '1')
-			ft_error("\033[1;31m not surrounded by walls \033[0m", 1, mapi);
+			ft_error("\033[1;31m not surrounded by walls\033[0m", 1, mapi);
 	}
 	j = -1;
 	i--;
 	while (mapi[i][++j])
 		if (mapi[i][j] != '1')
-			ft_error("\033[1;31m not surrounded by walls \033[0m", 1, mapi);
+			ft_error("\033[1;31m not surrounded by walls\033[0m", 1, mapi);
 }
 
 void	check_characters(char **mapi)
@@ -69,7 +69,7 @@ void	check_characters(char **mapi)
 		{
 			if (mapi[i][j] != '0' && mapi[i][j] != '1' && mapi[i][j] != 'C' &&
 				mapi[i][j] != 'E' && mapi[i][j] != 'P' && mapi[i][j] != 'S')
-				ft_error("\033[1;31m invalid characters \033[0m", 1, mapi);
+				ft_error("\033[1;31m invalid characters\033[0m", 1, mapi);
 			j++;
 		}
 		i++;

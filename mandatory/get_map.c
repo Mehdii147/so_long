@@ -21,9 +21,7 @@ int	get_line_count(char *map_filer)
 	cnt = 0;
 	fd = open(map_filer, O_RDONLY);
 	if (fd < 0)
-	{
 		ft_error(NULL, errno, NULL);
-	}
 	line = get_next_line(fd);
 	if (!line)
 		return (0);

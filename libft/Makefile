@@ -6,7 +6,7 @@
 #    By: ehafiane <ehafiane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/03 12:55:10 by ehafiane          #+#    #+#              #
-#    Updated: 2024/02/15 00:12:23 by ehafiane         ###   ########.fr        #
+#    Updated: 2024/02/18 12:43:21 by ehafiane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS =  ft_isalnum.c ft_isprint.c  ft_isalpha.c  ft_isdigit.c        \
 	ft_memchr.c ft_memcmp.c ft_strdup.c ft_calloc.c                  \
 	ft_substr.c ft_strtrim.c ft_strjoin.c ft_itoa.c                  \
 	ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c                    \
-	ft_strmapi.c ft_striteri.c ft_split.c                            \
+	ft_strmapi.c ft_striteri.c 			                             \
 	
 SRC_B = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	 ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c  \
