@@ -21,11 +21,11 @@ void	check_lines_lenth(char **mapi)
 	len = ft_strlen(*mapi);
 	while (mapi[i])
 	{
-		if ((int)ft_strlen(mapi[i]) != len || len > 43)
+		if ((int)ft_strlen(mapi[i]) != len || len > 43 || len < 3)
 			ft_error("\033[1;31m too much colones\033[0m", 1, mapi);
 		i++;
 	}
-	if (i > 23)
+	if (i > 23 || i < 3)
 		ft_error("\033[1;31m too much lines\033[0m", 1, mapi);
 }
 

@@ -23,6 +23,8 @@ int	get_line_count(char *map_filer)
 	if (fd < 0)
 		ft_error(NULL, errno, NULL);
 	line = get_next_line(fd);
+	if (!line)
+		return (0);
 	while (line)
 	{
 		cnt++;
@@ -48,13 +50,14 @@ char	**get_map(char *map_filer)
 		ft_error(NULL, errno, NULL);
 	i = 0;
 	line = get_next_line(fd);
+	if (!line)
+		return (0);
 	while (line)
 	{
 		if (line[ft_strlen(line) - 1] == '\n')
 			line[ft_strlen(line) - 1] = 0;
-		mapi[i] = line;
+		mapi[i++] = line;
 		line = get_next_line(fd);
-		i++;
 	}
 	mapi[i] = NULL;
 	close(fd);
